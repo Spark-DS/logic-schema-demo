@@ -16,26 +16,24 @@
 
 package sparkDS.logicSchema.demo.dataSpec.columns
 
-import sparkDS.logicSchema.dataSpec.columnType.{DateColumn, LongColumn, StringColumn, TimestampColumn}
-import sparkDS.logicSchema.demo.dataSpec.columnType.{PriceAmountColumn, SalesAmountColumn}
+import sparkDS.logicSchema.dataSpec.sysColumnTypes._
+import sparkDS.logicSchema.demo.dataSpec.columnTypes.{PriceAmountColumnType, SalesAmountColumnType}
 
-object CommonColumns {
-  //@formatter:off
-  val customer_id                                         = new LongColumn("customer_id")
-  val customer_name                                       = new StringColumn("customer_name")
-  val date_of_birth                                       = new DateColumn("date_of_birth")
-  val joined_date                                         = new DateColumn("joined_date")
-  val street_address                                      = new StringColumn("street_address")
-  val city_name                                           = new StringColumn("city_name")
-  val postal_code                                         = new StringColumn("postal_code")
-  val postal_state                                        = new StringColumn("postal_state")
+//@formatter:off
+class CustomerId          extends LongColumnType("customer_id")
+class CustomerName        extends StringColumnType("customer_name")
+class DateOfBirth         extends DateColumnType("date_of_birth")
+class JoinedDate          extends DateColumnType("joined_date")
+class StreetAddress       extends StringColumnType("street_address")
+class CityName            extends StringColumnType("city_name")
+class PostalCode          extends StringColumnType("postal_code")
+class PostalState         extends StringColumnType("postal_state")
 
-  val product_id                                          = new LongColumn("product_id")
-  val product_name                                        = new StringColumn("product_name")
-  val listing_product_price                               = new PriceAmountColumn("listing_product_price")
-  val sale_product_price                                  = new PriceAmountColumn("sale_product_price")
-  val sale_timestamp                                      = new TimestampColumn("sale_timestamp")
-  val sales_month                                         = new SalesAmountColumn("sales_month")
-  val sales_year                                          = new SalesAmountColumn("sales_year")
-  //@formatter:on
-}
+class ProductId           extends LongColumnType("product_id")
+class ProductName         extends StringColumnType("product_name")
+class ListingProductPrice extends PriceAmountColumnType("listing_product_price")
+class SaleProductPrice    extends PriceAmountColumnType("sale_product_price")
+class SaleTimestamp       extends TimestampColumnType("sale_timestamp")
+class SalesMonth          extends SalesAmountColumnType("sales_month")
+class SalesYear           extends SalesAmountColumnType("sales_year")
+//@formatter:on

@@ -14,16 +14,9 @@
  * limitations under the License.
  */
 
-package sparkDS.logicSchema.demo.dataSpec
+package sparkDS.logicSchema.demo.dataSpec.columnTypes
 
-import org.apache.spark.sql.types.{DataTypes, StructField, StructType}
-import sparkDS.logicSchema.demo.dataSpec.columns.CommonColumns
+import sparkDS.logicSchema.dataSpec.ColumnType
+import sparkDS.logicSchema.demo.dataSpec.ConsumerPrimitiveDataTypes
 
-object ConsumerCompositeDataTypes {
-  val ProductPropertiesStruct: StructType = DataTypes.createStructType(
-    List[StructField](
-      CommonColumns.product_id.structField,
-      CommonColumns.product_name.structField,
-      CommonColumns.listing_product_price.structField
-    ).toArray)
-}
+class SalesAmountColumnType(name: String) extends ColumnType(name, ConsumerPrimitiveDataTypes.PriceAmount)

@@ -16,20 +16,32 @@
 
 package sparkDS.logicSchema.demo.dataSpec.dataFiles
 
-import sparkDS.logicSchema.dataSpec.DataFile
-import sparkDS.logicSchema.dataSpec.columnType.ColumnBase
-import sparkDS.logicSchema.demo.dataSpec.columns.CommonColumns._
+import sparkDS.logicSchema.dataSpec.{ColumnType, DataFile}
+import sparkDS.logicSchema.demo.dataSpec.columns._
+
+//@formatter:off
+object CustomerFileColumns {
+  val customer_id           = new CustomerId()
+  val customer_name         = new CustomerName()
+  val date_of_birth         = new DateOfBirth()
+  val joined_date           = new JoinedDate()
+  val street_address        = new StreetAddress()
+  val city_name             = new CityName()
+  val postal_code           = new PostalCode()
+  val postal_state          = new PostalState()
+}
+//@formatter:on
 
 object CustomerFile extends DataFile(
   "CustomerFile",
-  List[ColumnBase](
-    customer_id,
-    customer_name,
-    date_of_birth,
-    street_address,
-    city_name,
-    postal_code,
-    postal_state,
-    joined_date
+  List[ColumnType](
+    CustomerFileColumns.customer_id,
+    CustomerFileColumns.customer_name,
+    CustomerFileColumns.date_of_birth,
+    CustomerFileColumns.street_address,
+    CustomerFileColumns.city_name,
+    CustomerFileColumns.postal_code,
+    CustomerFileColumns.postal_state,
+    CustomerFileColumns.joined_date
   )
 )

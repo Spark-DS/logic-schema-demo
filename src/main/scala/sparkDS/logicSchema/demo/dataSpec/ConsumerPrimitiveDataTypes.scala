@@ -16,9 +16,10 @@
 
 package sparkDS.logicSchema.demo.dataSpec
 
-import org.apache.spark.sql.types.{DataTypes, DecimalType}
+import org.apache.spark.sql.types.DataTypes
+import sparkDS.logicSchema.dataSpec.ColumnDataType
 
 object ConsumerPrimitiveDataTypes {
-  val PriceAmount: DecimalType = DataTypes.createDecimalType(7,2)
-  val SalesAmount: DecimalType = DataTypes.createDecimalType(9,2)
+  val PriceAmount = new ColumnDataType("decimal(7,2)", DataTypes.createDecimalType(7, 2))
+  val SalesAmount = new ColumnDataType("decimal(9,2)", DataTypes.createDecimalType(9, 2))
 }

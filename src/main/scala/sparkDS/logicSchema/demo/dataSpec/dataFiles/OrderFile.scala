@@ -16,18 +16,26 @@
 
 package sparkDS.logicSchema.demo.dataSpec.dataFiles
 
-import sparkDS.logicSchema.dataSpec.DataFile
-import sparkDS.logicSchema.dataSpec.columnType.ColumnBase
+import sparkDS.logicSchema.dataSpec.{ColumnType, DataFile}
 import sparkDS.logicSchema.demo.dataSpec.RecordValidators
-import sparkDS.logicSchema.demo.dataSpec.columns.CommonColumns._
+import sparkDS.logicSchema.demo.dataSpec.columns._
+
+//@formatter:off
+object OrderFileColumns {
+  val customer_id           = new CustomerId()
+  val product_id            = new ProductId()
+  val sale_product_price    = new SaleProductPrice()
+  val sale_timestamp        = new SaleTimestamp()
+}
+//@formatter:on
 
 object OrderFile extends DataFile(
   "OrderFile",
-  List[ColumnBase](
-    customer_id,
-    product_id,
-    sale_timestamp,
-    sale_product_price
+  List[ColumnType](
+    OrderFileColumns.customer_id,
+    OrderFileColumns.product_id,
+    OrderFileColumns.sale_timestamp,
+    OrderFileColumns.sale_product_price
   )
 ) {
 

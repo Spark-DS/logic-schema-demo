@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
-package sparkDS.logicSchema.demo.dataSpec.columnType
+package sparkDS.logicSchema.demo.dataSpec.columnTypes
 
-import sparkDS.logicSchema.dataSpec.columnType.ColumnBase
+import sparkDS.logicSchema.dataSpec.ColumnType
+import sparkDS.logicSchema.dataValidation.ValidationResultColumns.logic_validation_result.addColumnValidator
 import sparkDS.logicSchema.demo.dataSpec.{ColumnValidators, ConsumerPrimitiveDataTypes}
 
-class PriceAmountColumn(name: String) extends ColumnBase(name, ConsumerPrimitiveDataTypes.PriceAmount) {
+class PriceAmountColumnType(name: String) extends ColumnType(name, ConsumerPrimitiveDataTypes.PriceAmount) {
 
   addColumnValidator(ColumnValidators.price_amount_validator)
 
