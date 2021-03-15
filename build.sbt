@@ -2,7 +2,7 @@ import sbt.url
 
 organization := "com.github.spark-ds"
 name := "logic-schema-demo"
-version := "0.0.2-SNAPSHOT"
+version := "0.0.3"
 
 homepage := Option(url("https://github.com/spark-ds/logic-schema"))
 licenses := Seq("Apache-2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0"))
@@ -25,7 +25,7 @@ sonatypeCredentialHost := "s01.oss.sonatype.org"
 
 scalaVersion := "2.12.12"
 
-val logicSchema = "com.github.spark-ds" %% "logic-schema" % "0.0.2-SNAPSHOT"
+val logicSchema = "com.github.spark-ds" %% "logic-schema" % "0.0.3"
 
 val scalaTest = "org.scalatest" %% "scalatest" % "3.0.1" % Test
 
