@@ -1,13 +1,23 @@
 package sparkDS.logicSchema.demo.dataSpec
 
 import org.scalatest._
+import sparkDS.logicSchema.dataTypeComparison.{ComparisonResult, SchemaComparison}
 import sparkDS.logicSchema.demo.dataSpec.dataFiles.OrderFile
 import sparkDS.logicSchema.demo.testData.TestDataFile
 
 class ConsumerParquetFileTest extends FlatSpec with Matchers with BeforeAndAfterAll {
 
   "========================================================================================================================" +
-    "\nCase 1 - Validation of valid order file" should "return true" in {
+    "\nCase 1 - Schema validation of valid order file" should "return true" in {
+    // Refer GenerateConsumerParquetFilesTest
+    val orderDF = TestDataFile.validOrderDF
+    val comparisonResult: ComparisonResult = SchemaComparison.compareSchema(
+      "oderDF_schema", orderDF.schema,
+      "OrderFile.schema", OrderFile.schema)
+    assert(comparisonResult.isSame, "Schema validation of valid order file failed")
+  }
+
+  "\nCase 2 - Data validation of valid order file" should "return true" in {
     val orderDF = TestDataFile.validOrderDF
     val validatedOrderDF = OrderFile.validate(orderDF)
     validatedOrderDF.printSchema()
@@ -20,7 +30,7 @@ class ConsumerParquetFileTest extends FlatSpec with Matchers with BeforeAndAfter
     assert(isValidDF, "Validation of valid order file failed")
   }
 
-  "\nCase 2 - Validation of invalid order file" should "return false" in {
+  "\nCase 3 - Data validation of invalid order file" should "return false" in {
     val orderDF = TestDataFile.invalidOrderDF
     val validatedOrderDF = OrderFile.validate(orderDF)
     validatedOrderDF.printSchema()

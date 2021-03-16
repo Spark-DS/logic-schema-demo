@@ -21,7 +21,7 @@ import sparkDS.logicSchema.demo.dataSpec.columns._
 
 //@formatter:off
 object CustomerFileColumns {
-  val customer_id           = new CustomerId()
+  val customer_id           = new CustomerId(true)
   val customer_name         = new CustomerName()
   val date_of_birth         = new DateOfBirth()
   val joined_date           = new JoinedDate()

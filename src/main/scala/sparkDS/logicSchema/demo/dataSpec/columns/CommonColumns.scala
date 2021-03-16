@@ -20,7 +20,7 @@ import sparkDS.logicSchema.dataSpec.sysColumnTypes._
 import sparkDS.logicSchema.demo.dataSpec.columnTypes.{PriceAmountColumnType, SalesAmountColumnType}
 
 //@formatter:off
-class CustomerId          extends LongColumnType("customer_id")
+class CustomerId(isKey: Boolean) extends LongColumnType("customer_id", isKey)
 class CustomerName        extends StringColumnType("customer_name")
 class DateOfBirth         extends DateColumnType("date_of_birth")
 class JoinedDate          extends DateColumnType("joined_date")
@@ -29,7 +29,7 @@ class CityName            extends StringColumnType("city_name")
 class PostalCode          extends StringColumnType("postal_code")
 class PostalState         extends StringColumnType("postal_state")
 
-class ProductId           extends LongColumnType("product_id")
+class ProductId(isKey: Boolean) extends LongColumnType("product_id", isKey)
 class ProductName         extends StringColumnType("product_name")
 class ListingProductPrice extends PriceAmountColumnType("listing_product_price")
 class SaleProductPrice    extends PriceAmountColumnType("sale_product_price")

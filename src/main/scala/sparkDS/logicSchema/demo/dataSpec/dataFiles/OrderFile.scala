@@ -22,8 +22,8 @@ import sparkDS.logicSchema.demo.dataSpec.columns._
 
 //@formatter:off
 object OrderFileColumns {
-  val customer_id           = new CustomerId()
-  val product_id            = new ProductId()
+  val customer_id           = new CustomerId(true)
+  val product_id            = new ProductId(true)
   val sale_product_price    = new SaleProductPrice()
   val sale_timestamp        = new SaleTimestamp()
 }
