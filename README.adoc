@@ -7,3 +7,10 @@ Spark-DS/logic-schema follows the principal of code as specification and configu
 * Specify constraints;
 * Compare Schemas;
 * Validate data against schema.
+
+.Try
+----
+git clone https://github.com/Spark-DS/logic-schema-demo.git
+cd logic-schema-demo
+sbt test
+----
