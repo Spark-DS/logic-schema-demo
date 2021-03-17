@@ -39,11 +39,9 @@ class GenerateConsumerParquetFilesTest extends FlatSpec with Matchers {
     val orderDF = SparkTestUtil.spark.createDataFrame(orderFileData, OrderFile.schema)
     println("\n\n GenerateConsumerParquetFilesTest:")
     println("\n\n     Test data files were not written to avoid interference with other test cases, uncomment to regenerate.\n\n\n")
-    /*
-        orderDF.coalesce(1)
-        orderDF.show(999, truncate = false)
-        orderDF.write.mode(SaveMode.Overwrite).parquet(TestDataFile.validOrderFilePath)
-    */
+    orderDF.coalesce(1)
+    orderDF.show(999, truncate = false)
+//    orderDF.write.mode(SaveMode.Overwrite).parquet(TestDataFile.validOrderFilePath)
   }
 
   "\nCase 2 - Generate invalid sales parquet file" should "return true" in {
@@ -64,11 +62,9 @@ class GenerateConsumerParquetFilesTest extends FlatSpec with Matchers {
     val orderDF = SparkTestUtil.spark.createDataFrame(orderFileData, OrderFile.schema)
     println("\n\n GenerateConsumerParquetFilesTest:")
     println("\n\n     Test data files were not written to avoid interference with other test cases, uncomment to regenerate.\n\n\n")
-    /*
-        orderDF.coalesce(1)
-        orderDF.show(999, truncate = false)
-        orderDF.write.mode(SaveMode.Overwrite).parquet(TestDataFile.invalidOrderFilePath)
-    */
+    orderDF.coalesce(1)
+    orderDF.show(999, truncate = false)
+//    orderDF.write.mode(SaveMode.Overwrite).parquet(TestDataFile.invalidOrderFilePath)
   }
 
 }

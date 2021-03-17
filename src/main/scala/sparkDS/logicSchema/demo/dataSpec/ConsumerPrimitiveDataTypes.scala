@@ -20,6 +20,6 @@ import org.apache.spark.sql.types.DataTypes
 import sparkDS.logicSchema.dataSpec.ColumnDataType
 
 object ConsumerPrimitiveDataTypes {
-  val PriceAmount = new ColumnDataType("decimal(7,2)", DataTypes.createDecimalType(7, 2))
-  val SalesAmount = new ColumnDataType("decimal(9,2)", DataTypes.createDecimalType(9, 2))
+  val PriceAmount: ColumnDataType = new ColumnDataType("decimal(7,2)", DataTypes.createDecimalType(7, 2))
+  val SalesAmount: ColumnDataType = new ColumnDataType("decimal(9,2)", DataTypes.createDecimalType(9, 2))
 }
