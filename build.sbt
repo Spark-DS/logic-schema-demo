@@ -2,9 +2,12 @@ import sbt.Keys.classLoaderLayeringStrategy
 import sbt.librarymanagement.Configurations.Test
 import sbt.{url}
 
-organization := "com.github.spark-ds"
+val this_version = "0.0.5"
+val this_org = "com.github.spark-ds"
+
+organization := this_org
 name := "logic-schema-demo"
-version := "0.0.4"
+version := this_version
 
 homepage := Option(url("https://github.com/spark-ds/logic-schema"))
 licenses := Seq("Apache-2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0"))
@@ -27,7 +30,7 @@ sonatypeCredentialHost := "s01.oss.sonatype.org"
 
 scalaVersion := "2.12.12"
 
-val logicSchema = "com.github.spark-ds" %% "logic-schema" % "0.0.4"
+val logicSchema = this_org %% "logic-schema" % this_version
 
 val scalaTest = "org.scalatest" %% "scalatest" % "3.0.1" % Test
 
