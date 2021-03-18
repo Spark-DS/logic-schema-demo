@@ -9,11 +9,12 @@ Spark-DS/logic-schema follows the principal of code as specification and configu
 * Validate data against schema.
 
 == Try
-Follow https://sundog-spark.s3.amazonaws.com/spark-install.pdf[this document] to install necessary software
+Follow https://sundog-spark.s3.amazonaws.com/spark-install.pdf[this document] to install necessary software.
+
+Open a terminal (Unix) or Command (Windows) window
 
 .Then follow these steps:
 ----
-open a terminal (Unix) or Command (Windows) window
 git clone https://github.com/Spark-DS/logic-schema-demo.git
 cd logic-schema-demo
 sbt test
