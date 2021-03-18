@@ -12,8 +12,10 @@ Spark-DS/logic-schema follows the principal of code as specification and configu
 If you are working on Windows, please intall GitBash, then open a GitBash window
 If you are working on Linux or MacOS, install Git, then open a terminal
 Install
+
 * Java 8 or abovesbt
 * sbt
+
 Then
 ----
 git clone https://github.com/Spark-DS/logic-schema-demo.git
