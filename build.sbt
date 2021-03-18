@@ -24,9 +24,9 @@ developers := List(
   )
 )
 
-publishTo := sonatypePublishToBundle.value
-sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
-sonatypeCredentialHost := "s01.oss.sonatype.org"
+// publishTo := sonatypePublishToBundle.value
+// sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
+// sonatypeCredentialHost := "s01.oss.sonatype.org"
 
 scalaVersion := "2.12.12"
 
