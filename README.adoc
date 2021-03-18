@@ -9,14 +9,14 @@ Spark-DS/logic-schema follows the principal of code as specification and configu
 * Validate data against schema.
 
 == Try
-If you are working on Windows, please intall GitBash, then open a GitBash window  
+If you are working on *Windows*, please intall _GitBash_, then open a _GitBash_ window  
 
-If you are working on Linux or MacOS, please install Git, then open a terminal  
+If you are working on *Linux* or *MacOS*, please install _Git_, then open a terminal window  
 
 And install
 
-* Java 8 or abovesbt
-* sbt
+* _Java_ 8 or above
+* _sbt_ 1.4 or above
 
 .Then follow these steps:
 ----
